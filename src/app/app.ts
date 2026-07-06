@@ -7,7 +7,7 @@ import { Component, signal, HostListener } from '@angular/core';
 export class App {
   protected readonly menuOpen = signal(false);
   protected readonly whatsappUrl =
-    'https://wa.me/559281241808?text=Ol%C3%A1%20Leandro!%20Vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20o%20acompanhamento.';
+    'https://wa.me/5592984758570?text=Ol%C3%A1%20Leandro!%20Vi%20seu%20site%20e%20quero%20saber%20mais%20sobre%20o%20acompanhamento.';
 
   protected readonly navLinks = [
     { label: 'Início', id: 'inicio' },
