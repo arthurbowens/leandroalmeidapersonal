@@ -1,3 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "tailwindcss";
+
+@theme {
+  --color-brand-black: #0a0a0a;
+  --color-brand-dark: #111111;
+  --color-brand-card: #161616;
+  --color-brand-border: #2a2a2a;
+  --color-brand-purple: #9333ea;
+  --color-brand-purple-light: #a855f7;
+  --color-brand-purple-dark: #6d28d9;
+  --color-brand-purple-glow: #c084fc;
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-black);
+  color: #e5e5e5;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--color-brand-purple) 40%, transparent);
+  color: #fff;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #c084fc 0%, #9333ea 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 0%,
+    color-mix(in srgb, var(--color-brand-purple) 25%, transparent),
+    transparent 70%
+  );
+}
+
+.card-glow {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-brand-purple) 20%, transparent),
+    0 8px 32px color-mix(in srgb, var(--color-brand-purple) 8%, transparent);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #9333ea 0%, #7c3aed 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--color-brand-purple) 40%, transparent);
+  transform: translateY(-2px);
+}
+
+.image-frame {
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--color-brand-purple) 30%, transparent),
+    0 24px 64px color-mix(in srgb, #000 60%, transparent);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.15s;
+  opacity: 0;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.3s;
+  opacity: 0;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.45s;
+  opacity: 0;
+}
